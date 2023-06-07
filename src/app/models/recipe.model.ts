@@ -10,4 +10,5 @@ export interface RecipeModel {
     instructions: string;
     sourceUrl: string;
     ingredients: IngredientModel[];
+    selected: boolean; // Added property to handle checkbox selection
 }
