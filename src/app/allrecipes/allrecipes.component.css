@@ -1,3 +1,20 @@
 .container {
     padding-top: 5%;
 }
+
+.py-5 {
+    padding-top: 0%!important;
+}
+
+.lead2 {
+    color: #4C5A4B;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.btn {
+    background-color: #84A98C;
+    font-weight: 500;
+    padding: 3%;
+    margin-bottom: 5%;
+}
