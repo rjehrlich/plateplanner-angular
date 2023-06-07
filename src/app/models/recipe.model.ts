@@ -2,6 +2,7 @@ import { IngredientModel } from "./ingredient.model";
 
 export interface RecipeModel {
     id: number;
+    imgUrl: string;
     title: string;
     description: string;
     prepTime: string;
