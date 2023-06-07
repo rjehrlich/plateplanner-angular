@@ -16,7 +16,7 @@ import { GrocerylistComponent } from './grocerylist/grocerylist.component';
     AppComponent,
     HomeComponent,
     AllrecipesComponent,
-    GrocerylistComponent
+    GrocerylistComponent,
   ],
   imports: [
     BrowserModule,
