@@ -10,7 +10,9 @@
         <div class="card-body">
           <h5 class="card-title">{{recipe.title}}</h5>
           <p class="card-text">{{recipe.description}}</p>
-          <button class="btn">View More</button>
+          <a href="{{recipe.sourceUrl}}" target="_blank">
+          <button class="btn">See Instructions</button>
+          </a>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" [id]="'checkbox' + recipe.id" [(ngModel)]="recipe.selected" (change)="addSelections(recipe.id)">
             <label class="form-check-label" for="'checkbox' + recipe.id">Select</label>

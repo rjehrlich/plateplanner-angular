@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { RecipeIngredientsService } from '../services/recipe-ingredients.service';
 import { IngredientModel } from '../models/ingredient.model';
 import { RecipeModel } from '../models/recipe.model';
 import { RecipeService } from '../services/recipe.service';
@@ -20,8 +18,6 @@ export class AllrecipesComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute, 
-    private recipeIngredientsService: RecipeIngredientsService,
     private recipeService: RecipeService) { }
 
 
