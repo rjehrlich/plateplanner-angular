@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RecipeIngredientModel } from '../models/recipe-ingredient-model';
+import { IngredientModel } from '../models/ingredient.model';
 
 @Component({
   selector: 'app-grocerylist',
@@ -7,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./grocerylist.component.css']
 })
 export class GrocerylistComponent  implements OnInit {
-  // declare ingredients array to handle query parameter of ingredient names
-  ingredients: string[] = [];
+  // declare ingredients array with value of RecipeIngredientModel array
+  ingredients: IngredientModel[] = [];
 
   // allow access to current route queries
   constructor(private route: ActivatedRoute) {}
@@ -18,9 +20,11 @@ export class GrocerylistComponent  implements OnInit {
     this.route.queryParamMap.subscribe(params => {
       // get that value of ingredients query parameter and assign to a variable
       const ingredientNames = params.get('ingredients');
-        // if there are ingredients, then split them and assign to ingredient variable array
+        // if there are ingredients, then parse them as RecipeIngredientModel type
         if (ingredientNames) {
-          this.ingredients = JSON.parse(ingredientNames);
+          console.log(ingredientNames)
+          this.ingredients = JSON.parse(ingredientNames) as IngredientModel[];
+          console.log(this.ingredients)
         }
     });
   }

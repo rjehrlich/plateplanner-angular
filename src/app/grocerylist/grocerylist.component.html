@@ -2,7 +2,12 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of ingredients">
         <input class="form-check-input me-1" type="checkbox" value="">
-        <label class="form-check-label">{{ingredient}}</label>
+        <label class="form-check-label">
+          <span>
+            {{ingredient.name}}
+            <small class="d-block text-body-secondary">Something Here</small>
+          </span>
+        </label>
       </li>
     </ul>
 </div>

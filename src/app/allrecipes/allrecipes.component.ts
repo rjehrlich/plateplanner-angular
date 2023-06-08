@@ -29,18 +29,21 @@ export class AllrecipesComponent implements OnInit {
     selectedRecipes.forEach((recipe) => {
       // for each recipeIngredient in recipeIngredients
       recipe.recipeIngredients.forEach((recipeIngredient) => {
+        console.log(recipeIngredient);
         const ingredient: RecipeIngredientModel = {
+          id: recipeIngredient.id,
           recipe: recipeIngredient.recipe,
           ingredient: recipeIngredient.ingredient,
           quantity: recipeIngredient.quantity,
         };
+        console.log(ingredient);
         // push the ingredients and quantity to the ingredients array
         ingredients.push(ingredient);
+        
       });
     });
-    // console.log(selectedRecipes);
-    // console.log(ingredients);
-    
+    console.log(selectedRecipes);
+    console.log(ingredients);
     // then send the user to grocerylist page passing the ingredients information
     this.router.navigate(['grocery-list'], { queryParams: { ingredients: JSON.stringify(ingredients), } });
   }
