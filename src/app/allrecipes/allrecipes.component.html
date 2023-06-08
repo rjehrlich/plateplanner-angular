@@ -12,7 +12,7 @@
           <p class="card-text">{{recipe.description}}</p>
           <button class="btn">View More</button>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" [id]="'checkbox' + recipe.id">
+            <input class="form-check-input" type="checkbox" [id]="'checkbox' + recipe.id" [(ngModel)]="recipe.selected">
             <label class="form-check-label" for="'checkbox' + recipe.id">Select</label>
           </div>
         </div>

@@ -19,6 +19,7 @@ export class AllrecipesComponent implements OnInit {
     // get all selected recipes
     const selectedRecipes = this.recipes
     .filter(recipe => recipe.selected);
+    //console.log(selectedRecipes);
 
     // aggregate the ingredients from the selected recipes
     const ingredients: string[] = [];
@@ -30,9 +31,11 @@ export class AllrecipesComponent implements OnInit {
         ingredients.push(ingredient.name);
       });
     });
-
+    // console.log(selectedRecipes);
+    // console.log(ingredients);
+    
     // then send the user to grocerylist page passing the ingredients information
-    this.router.navigate(['/grocery-list'], { queryParams: { ingredients: ingredients.join(',') } });
+    this.router.navigate(['grocery-list'], { queryParams: { ingredients: ingredients.join(',') } });
   }
 
   ngOnInit(): void {

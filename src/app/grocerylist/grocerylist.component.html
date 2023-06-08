@@ -1,1 +1,8 @@
-<p>grocerylist works!</p>
+<div>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of ingredients">
+        <input class="form-check-input me-1" type="checkbox" value="" id="">
+        <label class="form-check-label stretched-link">{{ingredient}}</label>
+      </li>
+    </ul>
+  </div>
