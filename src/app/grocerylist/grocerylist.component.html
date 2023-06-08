@@ -4,8 +4,8 @@
         <input class="form-check-input me-1" type="checkbox" value="">
         <label class="form-check-label">
           <span>
-            {{ingredient.name}}
-            <!-- <small class="d-block text-body-secondary">{{ingredient.quantity}}</small> -->
+            {{getIngredientName(ingredient)}}
+            <small class="d-block text-body-secondary">{{ getQuantityForRecipe(ingredient.id.recipeId, ingredient) }}</small>
           </span>
         </label>
       </li>

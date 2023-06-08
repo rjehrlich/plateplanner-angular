@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { RecipeIngredientModel } from '../models/recipe-ingredient-model';
-import { IngredientModel } from '../models/ingredient.model';
-
 
 @Injectable({
   providedIn: 'root'
@@ -26,9 +24,9 @@ export class RecipeIngredientsService {
   }
 
   // get recipe ingredients by multiple recipe IDs
-  getIngredientsForRecipeIds(recipeIds: number[]): Observable<IngredientModel[]>{
-    const endUrl = `${this.apiUrl}/recipes/${recipeIds.join(',')}/ingredients`
-    return this.http.get<IngredientModel[]>(endUrl)
+  getIngredientsForRecipeIds(recipeIds: number[]): Observable<RecipeIngredientModel[]> {
+    const endUrl = `${this.apiUrl}/recipes/${recipeIds.join(',')}/ingredients`;
+    return this.http.get<RecipeIngredientModel[]>(endUrl);
   }
 
 }
