@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { RecipeIngredientModel } from '../models/recipe-ingredient-model';
 import { IngredientModel } from '../models/ingredient.model';
-import { map } from 'rxjs';
 
 
 @Injectable({
