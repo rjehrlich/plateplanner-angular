@@ -20,7 +20,7 @@ export class GrocerylistComponent  implements OnInit {
       const ingredientNames = params.get('ingredients');
         // if there are ingredients, then split them and assign to ingredient variable array
         if (ingredientNames) {
-          this.ingredients = ingredientNames.split(',');
+          this.ingredients = JSON.parse(ingredientNames);
         }
     });
   }
