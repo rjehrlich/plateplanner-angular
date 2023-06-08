@@ -8,16 +8,19 @@ import { RecipeModel } from '../models/recipe.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  recipes!: RecipeModel[];
+  recipes: RecipeModel[] = [];
 
   constructor(private recipeService: RecipeService) { }
 
   grabRecipes(): void {
     this.recipeService.getRecipes().subscribe(
-      recipes => {
-        // assign the recipe to the recipe property
+      (recipes: RecipeModel[]) => {
         this.recipes = recipes;
-      });
+      },
+      (error) => {
+        console.error('Error getting recipes', error);
+      }
+      );
   }
 
   ngOnInit(): void {
