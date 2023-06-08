@@ -3,8 +3,8 @@
   <p class="lead2 mb-4">Your grocery list soon awaits!</p>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-md-4" *ngFor="let recipe of recipes">
+  <div class="row gy-5">
+    <div class="col-md-4 mx-auto" *ngFor="let recipe of recipes">
       <div class="card h-100">
         <img src="{{recipe.imgUrl}}" class="card-img-top" alt="{{recipe.title}}">
         <div class="card-body">
