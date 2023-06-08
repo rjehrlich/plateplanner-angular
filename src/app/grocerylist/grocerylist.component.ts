@@ -19,7 +19,7 @@ export class GrocerylistComponent  implements OnInit {
     private recipeService: RecipeService,
     private recipeIngredientsService: RecipeIngredientsService) {}
 
-  grabRecipeTitles(): void {
+  grabIngredientQuantities(): void {
   }
 
   ngOnInit(): void {

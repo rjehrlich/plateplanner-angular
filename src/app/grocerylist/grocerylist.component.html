@@ -1,11 +1,11 @@
 <div class="container">
     <ul class="list-group">
-      <li class="list-group-item">
+      <li class="list-group-item" *ngFor="let ingredient of recipeIngredients">
         <input class="form-check-input me-1" type="checkbox" value="">
         <label class="form-check-label">
           <span>
-            Recipe Ingredient Name
-            <small class="d-block text-body-secondary">Recipe Ingredient Quantity</small>
+            {{ingredient.name}}
+            <small class="d-block text-body-secondary">{{ingredient.quantity}}</small>
           </span>
         </label>
       </li>

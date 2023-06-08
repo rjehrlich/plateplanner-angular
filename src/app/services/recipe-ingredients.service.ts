@@ -9,7 +9,7 @@ import { IngredientModel } from '../models/ingredient.model';
   providedIn: 'root'
 })
 export class RecipeIngredientsService {
-  private apiUrl = 'http://localhost/8080';
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
