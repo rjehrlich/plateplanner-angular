@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeService } from '../services/recipe.service';
-import { RecipeModel } from '../models/recipe.model';
 import { Router } from '@angular/router';
-import { RecipeIngredientModel } from '../models/recipe-ingredient-model';
+import { RecipeIngredientsService } from '../services/recipe-ingredients.service';
+import { IngredientModel } from '../models/ingredient.model';
+import { RecipeModel } from '../models/recipe.model';
+import { RecipeService } from '../services/recipe.service';
 
 @Component({
   selector: 'app-allrecipes',
@@ -10,28 +11,31 @@ import { RecipeIngredientModel } from '../models/recipe-ingredient-model';
   styleUrls: ['./allrecipes.component.css']
 })
 export class AllrecipesComponent implements OnInit {
+  // declare variable to store recipeIds array
+  recipeIds: number[] = [];
 
-  recipes: RecipeModel[] = [];
-  recipeIngredients: string[] = [];
+  recipes: RecipeModel[] = []
+  ingredients: IngredientModel[] = [];
 
-  constructor(private recipeService: RecipeService, private router: Router) { }
+  constructor(
+    private router: Router, 
+    private recipeIngredientsService: RecipeIngredientsService,
+    private recipeService: RecipeService) { }
 
   // method to create an ingredient list from recipes selected by the user
   createGroceries(): void {
-    // get all selected recipes
-    const selectedRecipes = this.recipes
-    .filter(recipe => recipe.selected);
-    //console.log(selectedRecipes);
-
-   // collect the recipe ingredients' names
-   this.recipeIngredients = selectedRecipes.flatMap(recipe =>
-    recipe.recipeIngredients.map(recipeIngredient => recipeIngredient.ingredient.name)
-  );
-
-  // then send the user to the grocery-list page passing the ingredients information
-  this.router.navigate(['grocery-list'], { queryParams: { ingredients: this.recipeIngredients.join(',') } });
-    
+    this.recipeIngredientsService.getIngredientsForRecipeIds(this.recipeIds)
+      .subscribe(
+        (ingredients: IngredientModel[]) => {
+          this.ingredients = ingredients;
+          console.log(this.ingredients); // Do something with the ingredients
+        },
+        (error: any) => {
+          console.log('An error occurred:', error);
+        }
+      );
   }
+
 
   ngOnInit(): void {
     this.recipeService.getRecipes().subscribe(recipes => {
