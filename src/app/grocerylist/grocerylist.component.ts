@@ -19,9 +19,6 @@ export class GrocerylistComponent  implements OnInit {
     private recipeService: RecipeService,
     private recipeIngredientsService: RecipeIngredientsService) {}
 
-  grabIngredientQuantities(): void {
-  }
-
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const recipeIds: number[] = params['recipeIds'].split(',');
