@@ -1,4 +1,5 @@
 import { IngredientModel } from "./ingredient.model";
+import { RecipeIngredientModel } from "./recipe-ingredient-model";
 
 export interface RecipeModel {
     id: number;
@@ -10,5 +11,6 @@ export interface RecipeModel {
     instructions: string;
     sourceUrl: string;
     ingredients: IngredientModel[];
+    recipeIngredients: RecipeIngredientModel[];
     selected: boolean; // Added property to handle checkbox selection
 }
