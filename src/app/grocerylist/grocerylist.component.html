@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of recipeIngredients">
         <input class="form-check-input me-1" type="checkbox" value="">
@@ -10,4 +10,23 @@
         </label>
       </li>
     </ul>
+</div> -->
+
+<div class="container mx-auto" style="max-width: 520px;">
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let ingredient of recipeIngredients">
+      <div class="d-flex justify-content-start align-items-center">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="">
+        </div>
+        <div class="flex-grow-1 ms-3">
+          <span class="ingredient-name">
+            {{getIngredientName(ingredient)}}
+            <small class="d-block text-muted">{{ getQuantityForRecipe(ingredient.id.recipeId, ingredient) }}</small>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
