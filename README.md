@@ -41,20 +41,9 @@ I planned out the project using the following areas as main focus:
 
 ### Wireframes
 #### Homepage
-![home](/assets/images/branding/wireframes/Home.png)
+![home](/src/assets/images/branding/wireframes/Home.png)
 
-### Endpoint Mappings
-
-#### Recipe, Ingredient, and RecipeIngredient Controllers
-| HTTP Methods 	| Full URL                                                            	|                       URL                      	|                Functionally                	|
-|--------------	|---------------------------------------------------------------------	|:----------------------------------------------:	|:------------------------------------------:	|
-| GET          	| http://localhost:8080/api/recipes                                   	| /recipes                                       	| Get all recipes                            	|
-| GET          	| http://localhost:8080/recipes/{recipeId}                            	| /recipes/{recipeId}                            	| Get a recipe by id                         	|
-| GET          	| http://localhost:8080/ingredients                                   	| /ingredients                                   	| Get all ingredients                        	|
-| GET          	| http://localhost:8080/ingredients/{ingredientId}                    	| /ingredients/{ingredientId}                    	| Get an ingredient by id                    	|
-| GET          	| http://localhost:8080/recipes/{recipeId}/ingredients                	| /recipes/{recipeId}/ingredients                	| Get all ingredients for a recipe by id     	|
-| GET          	| http://localhost:8080/recipes/{recipeId}/ingredients/{ingredientId} 	| /recipes/{recipeId}/ingredients/{ingredientId} 	| Get an ingredient by id for a recipe by id 	|
-| GET          	| http://localhost:8080/grocery-lists                                 	| /grocery-lists                                 	| Get grocerylist from recipes               	|
+[Other Wireframes](/src/assets/images/branding/wireframes)
 
 --------
 ### Kanban Project Plan
