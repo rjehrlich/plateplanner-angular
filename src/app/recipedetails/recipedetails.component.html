@@ -1,14 +1,17 @@
 <div class="container">
-<div class="row featurette" *ngIf="recipe">
-    <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">{{ recipe.title }}</h2>
-      <h3 class="text-body-secondary">{{ recipe.description }}</h3>
-      <p class="lead">{{ recipe.prepTime }}</p>
-      <p class="lead">{{ recipe.cookTime }}</p>
-      <p class="lead"></p>
+    <div class="row featurette" *ngIf="recipe">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{ recipe.title }}</h2>
+        <h3 class="text-body-secondary">{{ recipe.description }}</h3>
+        <p class="lead">{{ recipe.prepTime }}</p>
+        <p class="lead">{{ recipe.cookTime }}</p>
+        <p class="lead"></p>
+      </div>
+      <div class="col-md-5">
+        <div class="ratio ratio-1x1">
+          <img src="{{recipe.imgUrl}}" class="featurette-image img-fluid" alt="{{recipe.title}}">
+        </div>
+      </div>
     </div>
-    <div class="col-md-5">
-      <img src="{{recipe.imgUrl}}" class="featurette-image img-fluid mx-auto" width="500" height="500"  role="img" alt="{{recipe.title}}" preserveAspectRatio="xMidYMid slice" focusable="false">
-    </div>
-</div>
-</div>
+  </div>
+  

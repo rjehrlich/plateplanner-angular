@@ -34,3 +34,18 @@
     border-style: none;
     border-radius: 0.5rem;
 }
+
+.form-check-input {
+    width: 1.2em !important;
+    height: 1.2em !important;
+    border-width: 3px;
+}
+
+.form-check-input:checked {
+    background-color: #4C5A4B;
+    border-color: #84A98C;
+}
+
+.form-check-label {
+    margin-left: 2%;
+}
