@@ -10,7 +10,7 @@
         <div class="card-body">
           <h5 class="card-title">{{recipe.title}}</h5>
           <p class="card-text">{{recipe.description}}</p>
-          <a href="{{recipe.sourceUrl}}" target="_blank">
+          <a [routerLink]="['/recipes', recipe.id]">
           <button class="btn">See Instructions</button>
           </a>
           <div class="form-check">
