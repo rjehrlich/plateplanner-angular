@@ -47,7 +47,7 @@ I planned out the project using the following areas as main focus:
 
 ### Branding
 ![branding colors](/src/assets/images/branding/Plate%20Planner%20Color%20Palette.png)
-![logos](/src/assets/images/branding/full_logo.png)
+![logos](/src/assets/images/branding/whitelogo_full.png)
 
 --------
 ### Kanban Project Plan
