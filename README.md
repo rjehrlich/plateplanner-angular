@@ -1,6 +1,6 @@
 # Plate Planner Frontend
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
-This projecy also uses a locally hosted Java Spring Boot API to generate most of the data. The project repo can be found here: [Plate Planner API](https://github.com/rjehrlich/plateplanner-api)
+This project also uses a locally hosted Java Spring Boot API to generate most of the data. The project repo can be found here: [Plate Planner API](https://github.com/rjehrlich/plateplanner-api)
 
 ## Table of Contents
 * <a href="README.md#project-description"> Project Description</a>
@@ -45,16 +45,19 @@ I planned out the project using the following areas as main focus:
 
 [Other Wireframes](/src/assets/images/branding/wireframes)
 
+### Branding
+![branding colors](/src/assets/images/branding/Plate%20Planner%20Color%20Palette.png)
+![logos](/src/assets/images/branding/full_logo.png)
+
 --------
 ### Kanban Project Plan
-![kanban board](/images/projectplan.png)
+![kanban board](src/assets/images/plannerERD.png)
 
 [Project Plan Link](https://github.com/users/rjehrlich/projects/5)
 
 ## Hurdles
-* One big hurdle I had was when I first set up my entity relationships I was getting several server log errors about overriding hashcode() and equals() methods. This was mostly due to the fact that my relationships between entities is using composite keys as mappings.
-  * I found [this article](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/) on how to implement these methods which helped with my development process
 * Due to my entity relationship setup I also had a REALLY tough time getting my endpoints to display the proper information I wanted. I ended up having to reconfigure them about 2 times
+* I have a feature in my app that uses checkboxes on the recipes to pass the id's of those recipes selected through as query parameters, in order to create the logic for part of the list generation. I credit [this article](https://dev.to/shane/angular-9-how-to-pass-arrays-via-query-parameters-23ai) for help with understanding how to do this.
 
 ## Installation Instructions/ Dependencies
 
@@ -66,9 +69,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng add @ng-bootstrap/ng-bootstrap` if you need to reinstall upon running the application.
 
+### Fork and Clone the API Backend
+
+This would be a required step if you want to see the whole project in action!
+Repo Link: https://github.com/rjehrlich/plateplanner-api
+
 ## Credits
 * [Angular documentation](https://angular.io/docs)
 * [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+* [Creating practice project to understand this assignment better](https://www.youtube.com/watch?v=Gx4iBLKLVHk)
 * **Leo R (GA Instructor)**: https://github.com/LRodriguez92
     * For spending what seemed like hours with me on installation issues in Angular and advice on project logic.
 * **Suresh S (GA Instructor)**: https://github.com/sureshmelvinsigera/
