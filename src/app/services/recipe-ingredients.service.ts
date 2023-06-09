@@ -13,7 +13,7 @@ export class RecipeIngredientsService {
 
   // get recipe ingredients by recipe ID
   getRecipeIngredientsByRecipeId(recipeId: number): Observable<RecipeIngredientModel[]> {
-    const url = `${this.apiUrl}/recipes/${recipeId}/ingredients`;
+    const url = `${this.apiUrl}/recipes/${recipeId}/recipe-ingredients`;
     return this.http.get<RecipeIngredientModel[]>(url);
   }
 
