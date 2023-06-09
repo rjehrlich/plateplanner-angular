@@ -1,5 +1,6 @@
 # Plate Planner Frontend
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
+This projecy also uses a locally hosted Java Spring Boot API to generate most of the data. The project repo can be found here: [Plate Planner API](https://github.com/rjehrlich/plateplanner-api)
 
 ## Table of Contents
 * <a href="README.md#project-description"> Project Description</a>
@@ -38,8 +39,9 @@ I planned out the project using the following areas as main focus:
 * As a User, I want to create a profile so that I can save recipes I enjoyed making.
 * As a User, I want to be able to add my own recipes and save them to refere to later.
 
-### ERD Diagram
-![ERD Diagram](images/plannerERD.png)
+### Wireframes
+#### Homepage
+![home](/assets/images/branding/wireframes/Home.png)
 
 ### Endpoint Mappings
 
